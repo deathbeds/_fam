@@ -16,8 +16,8 @@ dependencies:
 - importnb
 - ipyvolume
 - ipywebrtc
-- jaeger
 - json-e
+- jsonpointer
 - jupyter-server-proxy
 - jupyterlab==2.1.5
 - lxml
@@ -42,7 +42,6 @@ dependencies:
 - voila
 - pip:
   - graphviz2drawio
-  - jupyter-jaeger
   - jupyter-starters==0.3.0a0 
   - jupyter-videochat ==0.1.1 
   - pidgy
