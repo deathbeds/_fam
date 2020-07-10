@@ -38,6 +38,7 @@ dependencies:
 - pyld
 - pypdf2
 - python-language-server
+- python-graphviz
 - python=3.7
 - requests_cache
 - scikit-image
