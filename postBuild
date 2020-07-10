@@ -57,6 +57,10 @@ popd
 
 jupyter labextension list
 
-jupyter lab build --dev-build=False --minimize=False
+mkdir .tmp
+
+pushd .tmp
+  jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
+popd
 
 jupyter labextension list
