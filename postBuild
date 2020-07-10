@@ -5,7 +5,7 @@ python -m pidgy kernel install
 
 python -m pip check
 
-jupyter labextension install $(cat labex.txt) --no-build
+jupyter labextension install $(cat labex.txt) --no-build --debug
 
 jupyter labextension list
 
