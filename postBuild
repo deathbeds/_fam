@@ -17,10 +17,10 @@ git clone https://github.com/bollwyvl/jupyterlab-drawio
 pushd jupyterlab-drawio
   git checkout add-drawio-export
   git submodule update --init
+  jupyter nbconvert --execute scripts/Drawio_Update.ipynb
   jlpm
   jlpm build
   npm pack
-  jupyter labextension list
   jupyter labextension install \
       ./jupyterlab-drawio-*.tgz \
       --no-build \
