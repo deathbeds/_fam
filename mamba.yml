@@ -35,6 +35,7 @@ dependencies:
 - pip
 - pip
 - pygraphviz
+- pyld
 - pypdf2
 - python-language-server
 - python=3.7
