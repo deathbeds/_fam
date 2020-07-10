@@ -4,7 +4,6 @@
 @deathbeds/jupyterlab-fonts
 @deathbeds/jupyterlab-starters
 @jupyter-widgets/jupyterlab-manager
-@jupyterlab/toc
 @krassowski/jupyterlab-lsp
 nbdime-jupyterlab
 @pyviz/jupyterlab_pyviz

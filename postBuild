@@ -52,10 +52,7 @@ git clone https://github.com/bollwyvl/wxyz
 
 pushd wxyz
   git checkout jlab2
-  python -m _scripts._setup
-  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-  jlpm bootstrap
-  jlpm lab:link
+  doit -n4 lab_extensions
 popd
 
 jupyter labextension list

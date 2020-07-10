@@ -37,6 +37,7 @@ dependencies:
 - beautifulsoup4
 - scikit-learn
 - scikit-image
+- doit
 - pip:
   - graphviz2drawio
   - pidgy
