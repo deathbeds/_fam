@@ -19,7 +19,26 @@ dependencies:
 - altair
 - jaeger
 - importnb
+- babel
+- escapism
+- httpx
+- json-e
+- jupyter-server-proxy
+- lxml
+- networkx
+- pandas
+- pillow
+- pip
+- pygraphviz
+- pypdf2
+- requests_cache
+- shapely
+- tabulate
+- beautifulsoup4
+- scikit-learn
+- scikit-image
 - pip:
+  - graphviz2drawio
   - pidgy
   - poser
   - jupyter-starters==0.3.0a0 
