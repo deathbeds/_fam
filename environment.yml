@@ -8,6 +8,15 @@ dependencies:
 - python=3.7
 - python-language-server
 - pip
+- pandas
+- bqplot
+- ipyvolume
+- ipywebrtc
+- hvplot
+- datashader
+- holoviews
+- matplotlib-base
+- altair
 - jaeger
 - importnb
 - pip:
