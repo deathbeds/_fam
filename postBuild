@@ -57,6 +57,6 @@ popd
 
 jupyter labextension list
 
-jupyter lab build --debug
+jupyter lab build --dev-build=False --minimize=True
 
 jupyter labextension list
