@@ -53,7 +53,8 @@ git clone https://github.com/bollwyvl/wxyz
 
 pushd wxyz
   git checkout jlab2
-  doit -n4 lab_extensions
+  doit -n4 setup_py ts
+  jupyter labextension install --debug --no-build $(find src/ts | grep tgz)w
 popd
 
 jupyter labextension list
