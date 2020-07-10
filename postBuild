@@ -49,7 +49,7 @@ pushd jupyterlab-outsource
   git checkout upgrade-jlab2
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm bootstrap
-  jlpm lerna run --parallel bundle
+  jlpm lerna exec -- npm pack .
   jupyter labextension install \
       ./src/_core/*.tgz \
       ./src/prosemirror/*.tgz \
