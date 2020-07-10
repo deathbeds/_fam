@@ -5,6 +5,7 @@
 @deathbeds/jupyterlab-starters
 @jupyter-voila/jupyterlab-preview
 @jupyter-widgets/jupyterlab-manager
-@krassowski/jupyterlab-lsp
 @pyviz/jupyterlab_pyviz
+ipyvolume
+jupyter-threejs
 nbdime-jupyterlab
