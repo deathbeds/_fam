@@ -18,13 +18,16 @@ pushd jupyterlab-drawio
   git checkout add-drawio-export
   git submodule update --init
   jupyter nbconvert --execute scripts/Drawio_Update.ipynb
-  jlpm
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm build
   npm pack
   jupyter labextension install \
       ./jupyterlab-drawio-*.tgz \
       --no-build \
       --debug
+  pushd drawio-export
+    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  popd
 popd
 
 git clone https://github.com/bollwyvl/jupyterlab-lsp.git
