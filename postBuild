@@ -76,6 +76,9 @@ pushd .tmp
   jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
 popd
 
+conda clean -yaf
+jlpm cache clean
+
 jupyter serverextension list
 jupyter kernelspec list
 jupyter labextension list
