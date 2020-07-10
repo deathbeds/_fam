@@ -7,8 +7,10 @@ dependencies:
 - nodejs >= 12, <13
 - python=3.7
 - pip
+- jaeger
 - importnb
 - pip:
   - pidgy
   - poser
   - jupyter-starters==0.3.0a0 
+  - jupyter-jaeger
