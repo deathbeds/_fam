@@ -3,45 +3,47 @@ channels:
 - conda-forge
 - nodefaults
 dependencies:
-- jupyterlab==2.1.5
-- nodejs >= 12, <13
-- python=3.7
-- python-language-server
-- pip
-- pandas
+- altair
+- babel
+- beautifulsoup4
 - bqplot
+- datashader
+- doit
+- escapism
+- holoviews
+- httpx
+- hvplot
+- importnb
 - ipyvolume
 - ipywebrtc
-- hvplot
-- datashader
-- holoviews
-- matplotlib-base
-- altair
 - jaeger
-- importnb
-- babel
-- escapism
-- httpx
 - json-e
 - jupyter-server-proxy
+- jupyterlab==2.1.5
 - lxml
+- matplotlib-base
 - networkx
+- nodejs >= 12, <13
+- nteract_on_jupyter
+- pandas
 - pandas
 - pillow
 - pip
+- pip
 - pygraphviz
 - pypdf2
+- python-language-server
+- python=3.7
 - requests_cache
+- scikit-image
+- scikit-learn
 - shapely
 - tabulate
-- beautifulsoup4
-- scikit-learn
-- scikit-image
-- doit
+- voila
 - pip:
   - graphviz2drawio
+  - jupyter-jaeger
+  - jupyter-starters==0.3.0a0 
+  - jupyter-videochat ==0.1.1 
   - pidgy
   - poser
-  - jupyter-starters==0.3.0a0 
-  - jupyter-jaeger
-  - jupyter-videochat ==0.1.1 
