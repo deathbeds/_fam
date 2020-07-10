@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eux
 
-mamba env update --file mamba.yml --prefix ${CONDA_DIR}
+mamba env update --file mamba.yml --prefix ${NB_PYTHON_PREFIX}
 
 python -m pidgy kernel install
 
