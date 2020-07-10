@@ -5,6 +5,9 @@
   "@jupyterlab/extensionmanager-extension": {
     "enabled": false
   },
+  "@jupyterlab/statusbar-extension:plugin": {
+      "visible": false
+  },
   "@deathbeds/jupyterlab-fonts:fonts": {
     "styles": {
       ":root": {
