@@ -51,3 +51,4 @@ dependencies:
   - jupyter-videochat ==0.1.1 
   - pidgy
   - poser
+  - git+https://github.com/deathbeds/ktop
