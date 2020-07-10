@@ -1,0 +1,37 @@
+{
+  "LabApp": {
+    "tornado_settings": {
+      "page_config_data": {
+        "buildCheck": false,
+        "buildAvailable": false
+      }
+    }
+  },
+  "ServerProxy": {
+    "servers": {
+      "drawio-export-demo": {
+        "command": [
+          "python",
+          "scripts/drawio_export_demo.py"
+        ],
+        "environment": {
+          "PORT": "{port}"
+        },
+        "timeout": 40,
+        "launcher_entry": {
+          "title": "Drawio Export Demo"
+        }
+      }
+    }
+  },
+  "VideoChat": {
+    "room_prefix": "deathbeds-friends-and-family",
+    "rooms": [
+      {
+        "id": "07-11-2020",
+        "displayName": "seven-eleven",
+        "description": "deathbeds friends & family: episode 07-11-2020"
+      }
+    ]
+  }
+}
