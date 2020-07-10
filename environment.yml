@@ -14,3 +14,4 @@ dependencies:
   - poser
   - jupyter-starters==0.3.0a0 
   - jupyter-jaeger
+  - jupyter-videochat ==0.1.1 
