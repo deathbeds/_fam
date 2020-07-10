@@ -7,7 +7,8 @@ python -m pidgy kernel install
 
 python -m pip check
 
-jupyter serverextension enable --py jupyter_videochat --sys-prefix
+jupyter serverextension enable --sys-prefix --py jupyter_videochat 
+jupyter serverextension enable --sys-prefix --py jupyter_lsp
 
 jupyter labextension install $(cat labex.txt) --no-build --debug
 
@@ -65,4 +66,5 @@ pushd .tmp
   jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
 popd
 
+jupyter serverextension list
 jupyter labextension list
