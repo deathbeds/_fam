@@ -1,0 +1,15 @@
+{
+  "@deathbeds/jupyterlab-fonts:fonts": {
+    "styles": {
+      ":root": {
+        "--jp-code-font-family": "'Fira Code Medium'"
+      }
+    }
+  },
+  "@jupyterlab/filebrowser-extension:browser": {
+    "navigateToCurrentDirectory": true
+  },
+  "@jupyterlab/extensionmanager-extension": {
+    "enabled": false
+  }
+}
