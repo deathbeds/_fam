@@ -16,6 +16,7 @@ git clone https://github.com/bollwyvl/jupyterlab-drawio
 
 pushd jupyterlab-drawio
   git checkout add-drawio-export
+  git submodule update --init
   jlpm
   jlpm build
   npm pack
