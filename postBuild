@@ -27,6 +27,7 @@ popd
 git clone https://github.com/bollwyvl/jupyter-videochat.git
 
 pushd jupyter-videochat
+  git checkout add-url-router
   jlpm
   jlpm build
   npm pack
@@ -39,15 +40,16 @@ popd
 git clone https://github.com/bollwyvl/jupyterlab-outsource.git
 
 pushd jupyterlab-outsource
+  git checkout upgrade-jlab2
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm bootstrap
   jlpm lab:link
 popd
 
 git clone https://github.com/bollwyvl/wxyz
-git checkout jlab2
 
 pushd wxyz
+  git checkout jlab2
   python -m _scripts._setup
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm bootstrap
