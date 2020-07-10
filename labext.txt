@@ -8,3 +8,4 @@
 @krassowski/jupyterlab-lsp
 nbdime-jupyterlab
 @pyviz/jupyterlab_pyviz
+jupyterlab-server-proxy-saulshanabrook
