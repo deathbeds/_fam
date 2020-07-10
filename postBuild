@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eux
 
-pidgy kernel install
+python -m pidgy kernel install
 
 python -m pip check
 
