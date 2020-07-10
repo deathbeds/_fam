@@ -5,11 +5,14 @@ channels:
 dependencies:
 - altair
 - antlr-python-runtime
+- appdirs
 - babel
 - beautifulsoup4
+- black
 - bqplot
 - datashader
 - doit=0.31
+- emoji
 - escapism
 - fastapi
 - graphviz
@@ -25,32 +28,36 @@ dependencies:
 - jupyterlab==2.1.5
 - lxml
 - matplotlib-base
+- more-itertools
 - nbdime
 - networkx
 - nodejs >= 12, <13
 - nteract_on_jupyter
 - pandas
-- pandas
+- pathspec
 - pillow
-- pip
 - pip
 - pygraphviz
 - pyld
 - pypdf2
-- python-language-server
+- pytest
 - python-graphviz
+- python-language-server
 - python=3.7
+- raven
+- regex
 - requests_cache
 - scikit-image
 - scikit-learn
 - shapely
+- stringcase
 - sympy
 - tabulate
 - voila
 - pip:
+  - git+https://github.com/deathbeds/ktop
   - graphviz2drawio
-  - jupyter-starters==0.3.0a0 
-  - jupyter-videochat ==0.1.1 
+  - jupyter-starters==0.3.0a0
+  - jupyter-videochat ==0.1.1
   - pidgy
   - poser
-  - git+https://github.com/deathbeds/ktop
