@@ -9,7 +9,7 @@ dependencies:
 - beautifulsoup4
 - bqplot
 - datashader
-- doit
+- doit=0.31
 - escapism
 - fastapi
 - graphviz
