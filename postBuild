@@ -37,6 +37,14 @@ pushd jupyter-videochat
       --debug
 popd
 
+git clone https://github.com/bollwyvl/jupyterlab-outsource.git
+
+pushd jupyterlab-outsource
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm bootstrap
+  jlpm lab:link
+popd
+
 jupyter labextension list
 
 jupyter lab build --debug
