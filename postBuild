@@ -28,6 +28,25 @@ pushd jupyterlab-drawio
       --debug
 popd
 
+git clone https://github.com/bollwyvl/jupyterlab-lsp.git
+
+pushd jupyterlab-lsp
+  python -m pip install -e .
+  jupyter lsp kernelspec install
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm bootstrap
+  jlpm lab:link
+popd
+
+git clone https://github.com/bollwyvl/jupyterlab-outsource.git
+
+pushd jupyterlab-outsource
+  git checkout upgrade-jlab2
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm bootstrap
+  jlpm lab:link
+popd
+
 git clone https://github.com/bollwyvl/jupyter-videochat.git
 
 pushd jupyter-videochat
@@ -39,15 +58,6 @@ pushd jupyter-videochat
       ./jupyterlab-videochat-*.tgz \
       --no-build \
       --debug
-popd
-
-git clone https://github.com/bollwyvl/jupyterlab-outsource.git
-
-pushd jupyterlab-outsource
-  git checkout upgrade-jlab2
-  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-  jlpm bootstrap
-  jlpm lab:link
 popd
 
 git clone https://github.com/bollwyvl/wxyz
@@ -67,4 +77,5 @@ pushd .tmp
 popd
 
 jupyter serverextension list
+jupyter kernelspec list
 jupyter labextension list
