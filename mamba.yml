@@ -12,6 +12,7 @@ dependencies:
 - doit
 - escapism
 - fastapi
+- graphviz
 - holoviews
 - httpx
 - hvplot
