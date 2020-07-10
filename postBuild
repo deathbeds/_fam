@@ -35,7 +35,12 @@ pushd jupyterlab-lsp
   jupyter lsp kernelspec install
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm bootstrap
-  jlpm lab:link
+  jlpm bundle
+  jupyter labextension install \
+      ./packages/jupyterlab-lsp/*.tgz \
+      ./packages/jupyterlab-go-to-definition/*.tgz \
+      --no-build \
+      --debug
 popd
 
 git clone https://github.com/bollwyvl/jupyterlab-outsource.git
@@ -44,7 +49,13 @@ pushd jupyterlab-outsource
   git checkout upgrade-jlab2
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm bootstrap
-  jlpm lab:link
+  jlpm lerna run --parallel bundle
+  jupyter labextension install \
+      ./src/_core/*.tgz \
+      ./src/prosemirror/*.tgz \
+      ./src/blockly/*.tgz \
+      --no-build \
+      --debug
 popd
 
 git clone https://github.com/bollwyvl/jupyter-videochat.git
