@@ -35,7 +35,7 @@ pushd jupyterlab-lsp
   jupyter lsp kernelspec install
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm bootstrap
-  jlpm bundle
+  jlpm lerna exec -- npm pack .
   jupyter labextension install \
       ./packages/jupyterlab-lsp/*.tgz \
       ./packages/jupyterlab-go-to-definition/*.tgz \
