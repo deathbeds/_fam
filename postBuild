@@ -44,6 +44,16 @@ pushd jupyterlab-outsource
   jlpm lab:link
 popd
 
+git clone https://github.com/bollwyvl/wxyz
+git checkout jlab2
+
+pushd wxyz
+  python -m _scripts._setup
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm bootstrap
+  jlpm lab:link
+popd
+
 jupyter labextension list
 
 jupyter lab build --debug
