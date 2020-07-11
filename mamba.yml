@@ -61,6 +61,7 @@ dependencies:
   - git+https://github.com/ekaschalk/jedhy.git
   - git+https://github.com/Calysto/calysto_hy.git
   - graphviz2drawio
+  - jupyterlab-git
   - jupyter-starters==0.3.0a0
   - jupyter-videochat ==0.1.1
   - pidgy
