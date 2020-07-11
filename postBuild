@@ -81,8 +81,8 @@ popd
 conda clean -yaf
 jlpm cache clean
 
-mkdir -p /srv/conda/envs/notebook/share/jupyter/lab/settings
-cp overrides.json /srv/conda/envs/notebook/share/jupyter/lab/settings
+mkdir -p ${NB_PYTHON_PREFIX}/share/jupyter/lab/settings
+cp overrides.json ${NB_PYTHON_PREFIX}/share/jupyter/lab/settings
 
 jupyter serverextension list
 jupyter kernelspec list
