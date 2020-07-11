@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+# populate the lab cache
+
+set -eux
+
+jupyter labextension install $(cat labex.txt) --no-build --debug
+
+pushd ft
+  pushd jupyterlab-drawio
+    git submodule update --init
+    jupyter nbconvert --execute scripts/Drawio_Update.ipynb
+    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+    jlpm build
+    npm pack
+    jupyter labextension install \
+        ./jupyterlab-drawio-*.tgz \
+        --no-build \
+        --debug
+  popd
+
+  pushd jupyterlab-lsp
+    jupyter lsp kernelspec install
+    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+    jlpm bootstrap
+    jlpm lab:link
+  popd
+
+  pushd jupyterlab-outsource
+    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+    jlpm bootstrap
+    jlpm lerna exec -- npm pack .
+    jupyter labextension install \
+        ./src/_core/*.tgz \
+        ./src/prosemirror/*.tgz \
+        ./src/blockly/*.tgz \
+        --no-build \
+        --debug
+  popd
+
+  pushd jupyter-videochat
+    jlpm
+    jlpm build
+    npm pack
+    jupyter labextension install \
+        ./jupyterlab-videochat-*.tgz \
+        --no-build \
+        --debug
+  popd
+
+  pushd wxyz
+    doit ts
+    jupyter labextension install --debug --no-build $(find src/ts | grep tgz)
+  popd
+popd
+
+jupyter labextension list
+
+mkdir .tmp
+
+pushd .tmp
+  jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
+popd
+
+mkdir -p _lab
+rm -rf _lab/*
+cp -r ${NB_PYTHON_PREFIX}/share/jupyter/lab/{settings,static,extensions} _lab

@@ -12,7 +12,7 @@
       "drawio-export-demo": {
         "command": [
           "python",
-          "scripts/drawio_export_demo.py"
+          "scripts/ft/jupyterlab-drawio/scripts/drawio_export_demo.py"
         ],
         "environment": {
           "PORT": "{port}"

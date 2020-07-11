@@ -5,8 +5,8 @@
 @deathbeds/jupyterlab-starters
 @jupyter-voila/jupyterlab-preview
 @jupyter-widgets/jupyterlab-manager
+@jupyterlab/debugger
 @pyviz/jupyterlab_pyviz
 ipyvolume
 jupyter-threejs
 nbdime-jupyterlab
-@jupyterlab/debugger

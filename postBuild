@@ -7,83 +7,37 @@ python -m pidgy kernel install
 # TODO: get working
 # python -m calysto_hy install
 
-python -m pip check
-
-jupyter serverextension enable --sys-prefix --py jupyter_videochat
-
-jupyter labextension install $(cat labex.txt) --no-build --debug
-
 pushd ft
-  pushd jupyterlab-drawio
-    git checkout add-drawio-export
-    git submodule update --init
-    jupyter nbconvert --execute scripts/Drawio_Update.ipynb
-    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-    jlpm build
-    npm pack
-    jupyter labextension install \
-        ./jupyterlab-drawio-*.tgz \
-        --no-build \
-        --debug
-    pushd drawio-export
-      jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-    popd
-  popd
-
   pushd jupyterlab-lsp
-    git checkout add-language-server-kernel
     python -m pip install -e .
-    jupyter lsp kernelspec install
-    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-    jlpm bootstrap
-    jlpm lab:link
-  popd
-
-  pushd jupyterlab-outsource
-    git checkout upgrade-jlab2
-    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-    jlpm bootstrap
-    jlpm lerna exec -- npm pack .
-    jupyter labextension install \
-        ./src/_core/*.tgz \
-        ./src/prosemirror/*.tgz \
-        ./src/blockly/*.tgz \
-        --no-build \
-        --debug
-  popd
-
-  pushd jupyter-videochat
-    git checkout add-url-router
-    jlpm
-    jlpm build
-    npm pack
-    jupyter labextension install \
-        ./jupyterlab-videochat-*.tgz \
-        --no-build \
-        --debug
   popd
 
   pushd wxyz
-    git checkout jlab2
-    doit -n4 setup_py_dev ts
-    jupyter labextension install --debug --no-build $(find src/ts | grep tgz)
+    doit setup_py_dev
   popd
 popd
 
-jupyter labextension list
+jupyter serverextension enable --sys-prefix --py jupyter_videochat
 
-mkdir .tmp
+if [ ! -d _lab ]; then
+  bash labBuild
+fi
 
-pushd .tmp
-  jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
+rm -rf ${NB_PYTHON_PREFIX}/share/jupyter/lab/{settings,static,extensions}
+cp -r _lab/* ${NB_PYTHON_PREFIX}/share/jupyter/lab
+
+pushd ft/jupyterlab-drawio/drawio-export
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
 popd
-
-conda clean -yaf
-jlpm cache clean
 
 mkdir -p ${NB_PYTHON_PREFIX}/share/jupyter/lab/settings
 cp overrides.json ${NB_PYTHON_PREFIX}/share/jupyter/lab/settings
 
+jupyter labextension disable @jupyterlab/extensionmanager-extension
+
 jupyter serverextension list
 jupyter kernelspec list
 jupyter labextension list
+
+conda clean -yaf
+jlpm cache clean
