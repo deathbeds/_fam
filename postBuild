@@ -80,6 +80,8 @@ pushd wxyz
   jupyter labextension install --debug --no-build $(find src/ts | grep tgz)
 popd
 
+
+jupyter labextension disable @jupyterlab/extensionmanager-extension
 jupyter labextension list
 
 mkdir .tmp
