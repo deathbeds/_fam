@@ -4,7 +4,8 @@ set -eux
 mamba env update --file mamba.yml --prefix ${NB_PYTHON_PREFIX}
 
 python -m pidgy kernel install
-python -m calysto_hy install
+# TODO: get working
+# python -m calysto_hy install
 
 python -m pip check
 
