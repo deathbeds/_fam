@@ -1,0 +1,9 @@
+__pycache__/
+*.egg-info
+build/
+jupyter-videochat/
+jupyterlab-drawio/
+jupyterlab-lsp/
+jupyterlab-outsource/
+node_modules/
+wxyz/
