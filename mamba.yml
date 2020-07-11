@@ -22,6 +22,7 @@ dependencies:
 - importnb
 - ipyvolume
 - ipywebrtc
+- isort >=4.2.5,<5
 - json-e
 - jsonpointer
 - jupyter-server-proxy
@@ -55,6 +56,7 @@ dependencies:
 - stringcase
 - sympy
 - tabulate
+- ujson <=1.35
 - voila
 - xeus-python
 - pip:
