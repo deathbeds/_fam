@@ -28,6 +28,7 @@ dependencies:
 - jupyterlab==2.1.5
 - lxml
 - matplotlib-base
+- metakernel
 - more-itertools
 - nbdime
 - networkx
@@ -57,6 +58,8 @@ dependencies:
 - xeus-python
 - pip:
   - git+https://github.com/deathbeds/ktop
+  - git+https://github.com/ekaschalk/jedhy.git
+  - git+https://github.com/Calysto/calysto_hy.git
   - graphviz2drawio
   - jupyter-starters==0.3.0a0
   - jupyter-videochat ==0.1.1
