@@ -32,6 +32,7 @@ dependencies:
 - metakernel
 - more-itertools
 - nbdime
+- nbgitpuller
 - networkx
 - nodejs >= 12, <13
 - nteract_on_jupyter
