@@ -10,6 +10,7 @@ python -m pidgy kernel install
 python -m pip check || echo "uh oh"
 
 jupyter serverextension enable --sys-prefix --py jupyter_videochat
+jupyter serverextension enable --sys-prefix --py nbgitpuller
 
 jupyter labextension install $(cat labex.txt) --no-build --debug
 
