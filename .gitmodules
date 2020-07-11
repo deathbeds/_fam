@@ -13,3 +13,6 @@
 [submodule "ft/wxyz"]
 	path = ft/wxyz
 	url = https://github.com/bollwyvl/wxyz.git
+[submodule "_lab"]
+	path = _lab
+	url = https://github.com/deathbeds/_fam.git
