@@ -4,6 +4,8 @@
 
 ## Environment Repo
 
+> ## Go see [How it works](./How+it+Works.dio.ipynb)
+
 The environment (like the [conda][] packages and stable
 [lab extensions][]) is over here:
 
