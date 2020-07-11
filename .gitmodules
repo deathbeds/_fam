@@ -1,0 +1,15 @@
+[submodule "ft/jupyterlab-drawio"]
+	path = ft/jupyterlab-drawio
+	url = https://github.com/bollwyvl/jupyterlab-drawio
+[submodule "ft/jupyterlab-lsp"]
+	path = ft/jupyterlab-lsp
+	url = https://github.com/bollwyvl/jupyterlab-lsp.git
+[submodule "ft/jupyterlab-outsource"]
+	path = ft/jupyterlab-outsource
+	url = https://github.com/bollwyvl/jupyterlab-outsource.git
+[submodule "ft/jupyter-videochat"]
+	path = ft/jupyter-videochat
+	url = https://github.com/bollwyvl/jupyter-videochat.git
+[submodule "ft/wxyz"]
+	path = ft/wxyz
+	url = https://github.com/bollwyvl/wxyz.git
