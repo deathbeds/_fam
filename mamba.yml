@@ -54,6 +54,7 @@ dependencies:
 - sympy
 - tabulate
 - voila
+- xeus-python
 - pip:
   - git+https://github.com/deathbeds/ktop
   - graphviz2drawio
