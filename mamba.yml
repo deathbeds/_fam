@@ -46,6 +46,7 @@ dependencies:
 - python-language-server
 - python=3.7
 - raven
+- rdflib-jsonld
 - regex
 - requests_cache
 - scikit-image
