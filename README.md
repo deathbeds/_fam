@@ -12,7 +12,7 @@
 [wip]: https://mybinder.org/v2/gh/deathbeds/_fam/07-11-2020?urlpath=lab/tree/README.md
 [b-wip]: https://img.shields.io/badge/DEATHBEDS-07--11--2020%CE%B2-000?style=for-the-badge&logo=Jupyter&logoColor=fff&color=000
 
-[mvp]: https://mybinder.org/v2/gh/deathbeds/_fam/5ff5561?urlpath=lab/tree/README.md
+[mvp]: https://mybinder.org/v2/gh/deathbeds/_fam/44882fa?urlpath=lab/tree/README.md
 [b-mvp]: https://img.shields.io/badge/DEATHBEDS-07--11--2020-fff?style=for-the-badge&logo=Jupyter&logoColor=000&color=f37626
 
 ### Featured Forks
@@ -33,4 +33,5 @@ Unreleased packages and features
 [jupyterlab-outsource]: https://github.com/deathbeds/jupyterlab-outsource
 [jupyterlab-lsp]: https://github.com/krassowski/jupyterlab-lsp
 [jupyterlab-videochat]: https://github.com/yuvipanda/jupyter-videochat
+[jupyterlab-debugger]: #
 [wxyz]: https://github.com/deathbeds/wxyz
