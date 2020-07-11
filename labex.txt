@@ -9,3 +9,4 @@
 ipyvolume
 jupyter-threejs
 nbdime-jupyterlab
+@jupyterlab/debugger
