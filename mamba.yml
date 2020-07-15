@@ -46,6 +46,7 @@ dependencies:
 - pytest
 - python-graphviz
 - python-language-server
+- julia
 - python=3.7
 - raven
 - rdflib-jsonld
