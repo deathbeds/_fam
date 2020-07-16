@@ -96,12 +96,13 @@ jupyter labextension list
 
 mkdir .tmp
 
+julia -e '
+    using WebIO, IJulia
+    WebIO.install_jupyter_labextension()
+    WebIO.install_jupyter_nbextension()
+'
+
 pushd .tmp
-  julia -e '
-      using WebIO, IJulia
-      WebIO.install_jupyter_labextension()
-      WebIO.install_jupyter_nbextension()
-  '
   jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
 popd
 
