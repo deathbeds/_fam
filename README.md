@@ -35,3 +35,21 @@ Unreleased packages and features
 [jupyterlab-videochat]: https://github.com/yuvipanda/jupyter-videochat
 [jupyterlab-debugger]: #
 [wxyz]: https://github.com/deathbeds/wxyz
+
+### Julia Language Server
+
+> should be something like this
+
+```json
+  "LanguageServerManager": {
+    "language_servers": {
+      "julia-languageserver": {
+        "version": 3,
+        "cmd": ["julia", "--project=.", "-e", "using LanguageServer, LanguageServer.SymbolServer; runserver()", "."],
+        "languages": ["julia"],
+        "display_name": "LanguageServer.jl",
+        "mimetypes": ["text/julia", "text/x-julia"]
+      }
+    }
+  }
+```
