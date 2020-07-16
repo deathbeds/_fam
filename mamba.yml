@@ -44,6 +44,7 @@ dependencies:
 - pathspec
 - pillow
 - pip
+- pygls
 - pygraphviz
 - pyld
 - pypdf2
