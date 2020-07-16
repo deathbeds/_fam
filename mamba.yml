@@ -28,6 +28,7 @@ dependencies:
 - isort >=4.2.5,<5
 - json-e
 - jsonpointer
+- jupyter_bokeh
 - jupyter-server-proxy
 - jupyterlab==2.2.0
 - lxml
