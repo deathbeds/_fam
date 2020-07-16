@@ -47,12 +47,14 @@ popd
 # get the node-based language servers
 jlpm add --dev \
   bash-language-server \
-  vscode-css-languageserver-bin \
+  dictionary-en \
   dockerfile-language-server-nodejs \
-  vscode-html-languageserver-bin \
   javascript-typescript-langserver \
+  unified-language-server \
+  vscode-css-languageserver-bin \
+  vscode-html-languageserver-bin \
   vscode-json-languageserver-bin \
-  yaml-language-server@0.4
+  yaml-language-server@0.4 \
 
 git clone https://github.com/bollwyvl/jupyterlab-outsource.git
 

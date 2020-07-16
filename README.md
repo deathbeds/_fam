@@ -41,15 +41,17 @@ Unreleased packages and features
 > should be something like this
 
 ```json
+{
   "LanguageServerManager": {
     "language_servers": {
-      "julia-languageserver": {
+      "julia-languageserver":{
         "version": 3,
-        "cmd": ["julia", "--project=.", "-e", "using LanguageServer, LanguageServer.SymbolServer; runserver()", "."],
+        "argv": ["julia", "--debug=yes", "--project=.", "-e", "using LanguageServer, LanguageServer.SymbolServer; runserver()", "."],
         "languages": ["julia"],
         "display_name": "LanguageServer.jl",
         "mimetypes": ["text/julia", "text/x-julia"]
       }
     }
   }
+}
 ```
