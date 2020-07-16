@@ -1,0 +1,14 @@
+name = "IFam"
+uuid = "6951e09d-1031-4e3d-b4cd-540769dacc98"
+license = "MIT"
+authors = ["deathbeds <deathbeds@example.com>"]
+version = "0.0.1"
+
+[deps]
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+Interact = "c601a237-2ae4-5e1e-952c-7a85b0c7eef1"
+
+[compat]
+julia = "1"
+IJulia = "1"
+Interact = "0.10"
