@@ -18,7 +18,7 @@
           "pyls": {
             "plugins": {
               "pycodestyle": {
-                "ignore": ["E113", "E117"]
+                "ignore": ["E113", "E117", "W391", "W291"]
               }
             }
           }
