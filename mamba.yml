@@ -29,7 +29,7 @@ dependencies:
 - json-e
 - jsonpointer
 - jupyter-server-proxy
-- jupyterlab==2.1.5
+- jupyterlab==2.2.0
 - lxml
 - matplotlib-base
 - metakernel
