@@ -18,12 +18,12 @@ jupyter labextension install $(cat labex.txt) --no-build --debug
 # https://github.com/JuliaGizmos/WebIO.jl/issues/397#issuecomment-654146183
 git clone https://github.com/lcontento/WebIO.jl webio
 
-pushd webio
+pushd webio/packages
   git checkout 183167d49995ac213ecc2436af4ec54718b7c69d
   jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   jlpm lerna bootstrap
   jlpm build
-  pushd packages/jupyter-lab-provider
+  pushd jupyter-lab-provider
     jupyter labextension install $(npm pack .) --no-build --debug
   popd
 popd
