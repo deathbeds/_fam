@@ -14,6 +14,20 @@ jupyter serverextension enable --sys-prefix --py nbgitpuller
 
 jupyter labextension install $(cat labex.txt) --no-build --debug
 
+# On-going Issue
+# https://github.com/JuliaGizmos/WebIO.jl/issues/397#issuecomment-654146183
+git clone https://github.com/lcontento/WebIO.jl webio
+
+pushd webio
+  git checkout 183167d49995ac213ecc2436af4ec54718b7c69d
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm lerna bootstrap
+  jlpm build
+  pushd packages/jupyter-lab-provider
+    jupyter labextension install $(npm pack .) --no-build --debug
+  popd
+popd
+
 # this is a fork of https://github.com/QuantStack/jupyterlab-drawio
 git clone https://github.com/bollwyvl/jupyterlab-drawio
 
@@ -91,7 +105,6 @@ pushd wxyz
   doit -n4 setup_py_dev ts
   jupyter labextension install --debug --no-build $(find src/ts | grep tgz)
 popd
-
 
 jupyter labextension disable @jupyterlab/extensionmanager-extension
 jupyter labextension list
