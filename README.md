@@ -21,11 +21,12 @@ Unreleased packages and features
 
 | Upstream                  | Hot Jam                |
 |---------------------------|------------------------|
-| _your jam here_           |                        |
+| _your jam here_           | [PRs welcome][]        |
 | [jupyterlab-drawio][]     | PDF, Drawio Notebooks  |
 | [jupyterlab-outsource][]  | Lab 2.0                |
-| [jupyterlab-videochat][]  | Hot Links, Manager     |
 | [jupyterlab-lsp][]        | Language Server Kernel |
+| [jupyterlab-videochat][]  | Hot Links, Manager     |
+| [webio][]                 | Lab 2.0                |
 | [wxyz][]                  | Lab 2.0                |
 
 [jupyter-videochat]: https://github.com/yuvipanda/jupyter-videochat
@@ -33,5 +34,26 @@ Unreleased packages and features
 [jupyterlab-outsource]: https://github.com/deathbeds/jupyterlab-outsource
 [jupyterlab-lsp]: https://github.com/krassowski/jupyterlab-lsp
 [jupyterlab-videochat]: https://github.com/yuvipanda/jupyter-videochat
-[jupyterlab-debugger]: #
+[jupyterlab-debugger]: https://github.com/jupyterlab/debugger
+[PRs welcome]: https://github.com/deathbeds/_fam/pulls
+[webio]: https://github.com/JuliaGizmos/WebIO.jl
 [wxyz]: https://github.com/deathbeds/wxyz
+
+### Julia Language Server
+
+> if configured, is currently returing a basically empty `ServerCapabilities`
+> so I must be missing something... but _should_ be something like this,
+> added to `jupyter_notebook_config.json`:
+>  ```yaml
+>    "LanguageServerManager": {
+>      "language_servers": {
+>        "julia-languageserver": {
+>          "version": 3,
+>          "argv": ["julia", "--debug=yes", "--project=.", "-e", "using LanguageServer, LanguageServer.SymbolServer; runserver()", "."],
+>          "languages": ["julia"],
+>          "display_name": "LanguageServer.jl",
+>          "mimetypes": ["text/julia", "text/x-julia"]
+>        }
+>      }
+>    }
+>  ```

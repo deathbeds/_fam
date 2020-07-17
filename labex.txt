@@ -1,3 +1,4 @@
+@bokeh/jupyter_bokeh
 @deathbeds/jupyterlab-font-anonymous-pro
 @deathbeds/jupyterlab-font-dejavu-sans-mono
 @deathbeds/jupyterlab-font-fira-code

@@ -1,0 +1,24 @@
+name = "IFam"
+uuid = "6951e09d-1031-4e3d-b4cd-540769dacc98"
+license = "MIT"
+authors = ["deathbeds <deathbeds@example.com>"]
+version = "0.0.1"
+
+[deps]
+CSSUtil = "70588ee8-6100-5070-97c1-3cb50ed05fe8"
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+Interact = "c601a237-2ae4-5e1e-952c-7a85b0c7eef1"
+LanguageServer = "2b0e0bc5-e4fd-59b4-8912-456d1b03d8d7"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+TableView = "40c74d1a-b44c-5b06-a7c1-6cbea58ea978"
+WebIO = "0f1e0344-ec1d-5b48-a673-e5cf874b6c29"
+
+[compat]
+CSSUtil = "0.1"
+IJulia = "1"
+Interact = "0.10"
+julia = "1"
+LanguageServer = "3"
+PyPlot = "2"
+TableView = "0.6"
+WebIO = "≥ 0.3.1"
