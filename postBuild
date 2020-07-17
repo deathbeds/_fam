@@ -12,6 +12,10 @@ python -m pip check || echo "uh oh"
 jupyter serverextension enable --sys-prefix --py jupyter_videochat
 jupyter serverextension enable --sys-prefix --py nbgitpuller
 
+# tries to install in ~/.jupyter otherwise
+JUPYTER_CONFIG_DIR=${NB_PYTHON_PREFIX}/etc/jupyter \
+  julia -e 'using WebIO; WebIO.install_jupyter_serverextension()'
+
 jupyter labextension install $(cat labex.txt) --no-build --debug
 
 # On-going Issue

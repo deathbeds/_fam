@@ -38,20 +38,19 @@ Unreleased packages and features
 
 ### Julia Language Server
 
-> should be something like this
-
-```json
-{
-  "LanguageServerManager": {
-    "language_servers": {
-      "julia-languageserver":{
-        "version": 3,
-        "argv": ["julia", "--debug=yes", "--project=.", "-e", "using LanguageServer, LanguageServer.SymbolServer; runserver()", "."],
-        "languages": ["julia"],
-        "display_name": "LanguageServer.jl",
-        "mimetypes": ["text/julia", "text/x-julia"]
-      }
-    }
-  }
-}
-```
+> if configured, is currently returing a basically empty `ServerCapabilities`
+> so I must be missing something... but _should_ be something like this,
+> added to `jupyter_notebook_config.json`:
+>  ```yaml
+>    "LanguageServerManager": {
+>      "language_servers": {
+>        "julia-languageserver": {
+>          "version": 3,
+>          "argv": ["julia", "--debug=yes", "--project=.", "-e", "using LanguageServer, LanguageServer.SymbolServer; runserver()", "."],
+>          "languages": ["julia"],
+>          "display_name": "LanguageServer.jl",
+>          "mimetypes": ["text/julia", "text/x-julia"]
+>        }
+>      }
+>    }
+>  ```
