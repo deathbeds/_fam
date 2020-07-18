@@ -1,0 +1,14 @@
+@bokeh/jupyter_bokeh
+@deathbeds/jupyterlab-font-anonymous-pro
+@deathbeds/jupyterlab-font-dejavu-sans-mono
+@deathbeds/jupyterlab-font-fira-code
+@deathbeds/jupyterlab-fonts
+@deathbeds/jupyterlab-starters
+@jupyter-voila/jupyterlab-preview
+@jupyter-widgets/jupyterlab-manager
+@jupyterlab/debugger
+@jupyterlab/git
+@pyviz/jupyterlab_pyviz
+ipyvolume
+jupyter-threejs
+nbdime-jupyterlab

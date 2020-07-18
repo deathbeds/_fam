@@ -1,0 +1,77 @@
+name: _fammamba
+channels:
+- conda-forge
+- nodefaults
+dependencies:
+# this will have already been handled by Project.toml, as the conda-forge version
+# lags fairly significantly
+# - julia
+- altair
+- antlr-python-runtime
+- appdirs
+- babel
+- beautifulsoup4
+- black
+- bqplot
+- datashader
+- doit=0.31
+- emoji
+- escapism
+- fastapi
+- graphviz
+- holoviews
+- httpx
+- hvplot
+- importnb
+- ipyvolume
+- ipywebrtc
+- isort >=4.2.5,<5
+- json-e
+- jsonpointer
+- jupyter_bokeh
+- jupyter-server-proxy
+- jupyterlab==2.2.0
+- lxml
+- matplotlib-base
+- metakernel
+- more-itertools
+- nbdime
+- nbgitpuller
+- networkx
+- nodejs >= 12, <13
+- nteract_on_jupyter
+- pandas
+- pathspec
+- pillow
+- pip
+- pygls
+- pygraphviz
+- pyld
+- pypdf2
+- pytest
+- python-graphviz
+- python-language-server
+- python=3.7
+- raven
+- rdflib-jsonld
+- regex
+- requests_cache
+- scikit-image
+- scikit-learn
+- shapely
+- stringcase
+- sympy
+- tabulate
+- ujson <=1.35
+- voila
+- xeus-python
+- pip:
+  - git+https://github.com/deathbeds/ktop
+  - git+https://github.com/ekaschalk/jedhy.git
+  - git+https://github.com/Calysto/calysto_hy.git
+  - graphviz2drawio
+  - jupyterlab-git
+  - jupyter-starters==0.3.0a0
+  - jupyter-videochat ==0.1.1
+  - pidgy
+  - poser

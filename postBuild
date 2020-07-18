@@ -1,1 +1,131 @@
-pidgy kernel install
+#!/usr/bin/env bash
+set -eux
+
+mamba env update --file mamba.yml --prefix ${NB_PYTHON_PREFIX}
+
+python -m pidgy kernel install
+# TODO: get working
+# python -m calysto_hy install
+
+python -m pip check || echo "uh oh"
+
+jupyter serverextension enable --sys-prefix --py jupyter_videochat
+jupyter serverextension enable --sys-prefix --py nbgitpuller
+
+# tries to install in ~/.jupyter otherwise
+JUPYTER_CONFIG_DIR=${NB_PYTHON_PREFIX}/etc/jupyter \
+  julia -e 'using WebIO; WebIO.install_jupyter_serverextension()'
+
+jupyter labextension install $(cat labex.txt) --no-build --debug
+
+# On-going Issue
+# https://github.com/JuliaGizmos/WebIO.jl/issues/397#issuecomment-654146183
+git clone https://github.com/lcontento/WebIO.jl webio
+
+pushd webio/packages
+  git checkout 183167d49995ac213ecc2436af4ec54718b7c69d
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm lerna bootstrap
+  jlpm build
+  pushd jupyter-lab-provider
+    jupyter labextension install $(npm pack .) --no-build --debug
+  popd
+popd
+
+# this is a fork of https://github.com/QuantStack/jupyterlab-drawio
+git clone https://github.com/bollwyvl/jupyterlab-drawio
+
+pushd jupyterlab-drawio
+  git checkout add-drawio-export
+  git submodule update --init
+  jupyter nbconvert --execute scripts/Drawio_Update.ipynb
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm build
+  npm pack
+  jupyter labextension install \
+      ./jupyterlab-drawio-*.tgz \
+      --no-build \
+      --debug
+  pushd drawio-export
+    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  popd
+popd
+
+git clone https://github.com/bollwyvl/jupyterlab-lsp.git
+
+pushd jupyterlab-lsp
+  git checkout add-language-server-kernel
+  python -m pip install -e .
+  jupyter lsp kernelspec install
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm bootstrap
+  jlpm lab:link
+popd
+
+# get the node-based language servers
+jlpm add --dev \
+  bash-language-server \
+  dictionary-en \
+  dockerfile-language-server-nodejs \
+  javascript-typescript-langserver \
+  unified-language-server \
+  vscode-css-languageserver-bin \
+  vscode-html-languageserver-bin \
+  vscode-json-languageserver-bin \
+  yaml-language-server@0.4 \
+
+git clone https://github.com/bollwyvl/jupyterlab-outsource.git
+
+pushd jupyterlab-outsource
+  git checkout upgrade-jlab2
+  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
+  jlpm bootstrap
+  jlpm lerna exec -- npm pack .
+  jupyter labextension install \
+      ./src/_core/*.tgz \
+      ./src/prosemirror/*.tgz \
+      ./src/blockly/*.tgz \
+      --no-build \
+      --debug
+popd
+
+git clone https://github.com/bollwyvl/jupyter-videochat.git
+
+pushd jupyter-videochat
+  git checkout add-url-router
+  jlpm
+  jlpm build
+  npm pack
+  jupyter labextension install \
+      ./jupyterlab-videochat-*.tgz \
+      --no-build \
+      --debug
+popd
+
+git clone https://github.com/bollwyvl/wxyz
+
+pushd wxyz
+  git checkout jlab2
+  doit -n4 setup_py_dev ts
+  jupyter labextension install --debug --no-build $(find src/ts | grep tgz)
+popd
+
+jupyter labextension disable @jupyterlab/extensionmanager-extension
+jupyter labextension list
+
+mkdir .tmp
+
+pushd .tmp
+  jupyter lab build --debug --dev-build=False --minimize=False || echo "didn't work, continuing anyway"
+popd
+
+conda clean -yaf
+jlpm cache clean
+
+mkdir -p ${NB_PYTHON_PREFIX}/share/jupyter/lab/settings
+cp overrides.json ${NB_PYTHON_PREFIX}/share/jupyter/lab/settings
+
+python -m pip check || echo "uh oh"
+jupyter serverextension list
+jupyter kernelspec list
+jupyter labextension list

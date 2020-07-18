@@ -1,0 +1,7 @@
+name: _fam
+channels:
+- conda-forge
+- nodefaults
+dependencies:
+- mamba
+- pybind11
