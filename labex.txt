@@ -6,9 +6,16 @@
 @deathbeds/jupyterlab-starters
 @jupyter-voila/jupyterlab-preview
 @jupyter-widgets/jupyterlab-manager
+@jupyter-widgets/jupyterlab-sidecar
+jupyter-leaflet
+jupyter-cytoscape 
 @jupyterlab/debugger
 @jupyterlab/git
 @pyviz/jupyterlab_pyviz
 ipyvolume
 jupyter-threejs
 nbdime-jupyterlab
+ipysheet
+ipytree
+ipyevents
+ipycanvas
