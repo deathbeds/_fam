@@ -77,7 +77,7 @@ dependencies:
 - tabulate
 - ujson <=1.35
 - voila
-- xues-cling
+- xeus-cling
 - xeus-sqlite 
 - xeus-python
 - xonsh
