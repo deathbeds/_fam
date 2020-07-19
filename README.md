@@ -11,6 +11,8 @@
 
 ## Prior parks
 
+| Status | Demo              | Note                                         |
+|--------|------------------ |----------------------------------------------|
 | MVP    | [![b-mvp0711][]][mvp0711] | Click here, probably.                        |
 | WIP    | [![b-wip0711][]][wip0711] | Abandon hope, all ye who enter.              |
 
