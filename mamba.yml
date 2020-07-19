@@ -65,6 +65,7 @@ dependencies:
 - ujson <=1.35
 - voila
 - xeus-python
+- xonsh
 - pip:
   - git+https://github.com/deathbeds/ktop
   - git+https://github.com/ekaschalk/jedhy.git
