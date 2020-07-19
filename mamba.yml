@@ -18,15 +18,24 @@ dependencies:
 - emoji
 - escapism
 - fastapi
+- genson
 - graphviz
 - holoviews
 - httpx
 - hvplot
+- hypothesis-jsonschema
 - importnb
+- ipycanvas
+- ipycytoscape
+- ipyevents
+- ipyleaflet
+- ipysheet
+- ipytree
 - ipyvolume
 - ipywebrtc
 - isort >=4.2.5,<5
 - json-e
+- json5
 - jsonpointer
 - jupyter_bokeh
 - jupyter-server-proxy
@@ -35,6 +44,7 @@ dependencies:
 - matplotlib-base
 - metakernel
 - more-itertools
+- mypy
 - nbdime
 - nbgitpuller
 - networkx
@@ -47,6 +57,7 @@ dependencies:
 - pygls
 - pygraphviz
 - pyld
+- pyls-memestra
 - pypdf2
 - pytest
 - python-graphviz
@@ -59,11 +70,15 @@ dependencies:
 - scikit-image
 - scikit-learn
 - shapely
+- sidecar
 - stringcase
+- sphinx
 - sympy
 - tabulate
 - ujson <=1.35
 - voila
+- xues-cling
+- xeus-sqlite 
 - xeus-python
 - xonsh
 - pip:
@@ -71,6 +86,7 @@ dependencies:
   - git+https://github.com/ekaschalk/jedhy.git
   - git+https://github.com/Calysto/calysto_hy.git
   - graphviz2drawio
+  - jsonschema[format_nongpl]
   - jupyterlab-git
   - jupyter-starters==0.3.0a0
   - jupyter-videochat ==0.1.1
