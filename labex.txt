@@ -19,3 +19,4 @@ ipysheet
 ipytree
 ipyevents
 ipycanvas
+jupyterlab-plugin-graph
