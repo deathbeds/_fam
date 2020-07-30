@@ -6,6 +6,7 @@ mamba env update --file mamba.yml --prefix ${NB_PYTHON_PREFIX}
 python -m pidgy kernel install
 # TODO: get working
 # python -m calysto_hy install
+python -m spacy download en_core_web_sm
 
 python -m pip check || echo "uh oh"
 
