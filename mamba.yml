@@ -71,6 +71,8 @@ dependencies:
 - scikit-learn
 - shapely
 - sidecar
+- spacy
+- spacy-lookups-data
 - stringcase
 - sphinx
 - sympy
@@ -92,3 +94,5 @@ dependencies:
   - jupyter-videochat ==0.1.1
   - pidgy
   - poser
+  - snorkel
+  - textacy
