@@ -22,6 +22,7 @@ dependencies:
 - graphviz
 - holoviews
 - httpx
+- hdbscan
 - hvplot
 - hypothesis-jsonschema
 - importnb
@@ -48,6 +49,7 @@ dependencies:
 - nbdime
 - nbgitpuller
 - networkx
+- nltk
 - nodejs >= 12, <13
 - nteract_on_jupyter
 - pandas
@@ -71,12 +73,15 @@ dependencies:
 - scikit-learn
 - shapely
 - sidecar
+- snorkel
 - spacy
 - spacy-lookups-data
 - stringcase
 - sphinx
 - sympy
 - tabulate
+- textacy
+- umap
 - ujson <=1.35
 - voila
 - xeus-cling
@@ -94,5 +99,4 @@ dependencies:
   - jupyter-videochat ==0.1.1
   - pidgy
   - poser
-  - snorkel
-  - textacy
+  
