@@ -12,6 +12,7 @@ dependencies:
 - babel
 - beautifulsoup4
 - black
+- boltons
 - bqplot
 - datashader
 - doit=0.31
