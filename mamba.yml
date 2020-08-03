@@ -82,7 +82,6 @@ dependencies:
 - sympy
 - tabulate
 - textacy
-- umap
 - ujson <=1.35
 - voila
 - xeus-cling
