@@ -84,7 +84,6 @@ dependencies:
 - textacy
 - ujson <=1.35
 - voila
-- xeus-cling
 - xeus-sqlite 
 - xeus-python >=0.8.3
 - xonsh
