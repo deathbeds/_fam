@@ -15,7 +15,7 @@ dependencies:
 - boltons
 - bqplot
 - datashader
-- doit=0.31
+- doit =0.31
 - emoji
 - escapism
 - fastapi
@@ -41,7 +41,7 @@ dependencies:
 - jsonpointer
 - jupyter_bokeh
 - jupyter-server-proxy
-- jupyterlab==2.2.0
+- jupyterlab ==2.2.2
 - lxml
 - matplotlib-base
 - metakernel
@@ -51,7 +51,7 @@ dependencies:
 - nbgitpuller
 - networkx
 - nltk
-- nodejs >= 12, <13
+- nodejs >=12,<13
 - nteract_on_jupyter
 - pandas
 - pathspec
@@ -65,7 +65,7 @@ dependencies:
 - pytest
 - python-graphviz
 - python-language-server
-- python=3.7
+- python =3.7
 - raven
 - rdflib-jsonld
 - regex
@@ -86,7 +86,7 @@ dependencies:
 - voila
 - xeus-cling
 - xeus-sqlite 
-- xeus-python
+- xeus-python >=0.8.3
 - xonsh
 - pip:
   - git+https://github.com/deathbeds/ktop
@@ -95,7 +95,7 @@ dependencies:
   - graphviz2drawio
   - jsonschema[format_nongpl]
   - jupyterlab-git
-  - jupyter-starters==0.3.0a0
+  - jupyter-starters ==0.3.0a0
   - jupyter-videochat ==0.1.1
   - pidgy
   - poser
