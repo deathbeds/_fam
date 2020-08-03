@@ -87,6 +87,7 @@ dependencies:
 - xeus-sqlite 
 - xeus-python >=0.8.3
 - xonsh
+- xwidgets
 - pip:
   - git+https://github.com/deathbeds/ktop
   - git+https://github.com/ekaschalk/jedhy.git
