@@ -36,8 +36,7 @@ dependencies:
 - isort >=4.2.5,<5
 - json-e
 - json5
-- jsonpointer
-- jsonpointer>1.13
+- jsonpointer >1.13
 - jupyter_bokeh
 - jupyter-server-proxy
 - jupyterlab ==2.2.2
@@ -89,7 +88,6 @@ dependencies:
 - voila
 - webcolors
 - xeus-python >=0.8.3
-- xeus-sqlite
 - xonsh
 - pip:
   - git+https://github.com/deathbeds/ktop
