@@ -5,6 +5,13 @@
         "buildCheck": false,
         "buildAvailable": false
       }
+    },
+    "nbserver_extensions": {
+      "jupyter_drawio_export": true,
+      "jupyter_lsp": true,
+      "jupyter_videochat": true,
+      "jupyterlab_git": true,
+      "nbgitpuller": true
     }
   },
   "VideoChat": {

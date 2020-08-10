@@ -9,10 +9,6 @@ python -m pidgy kernel install
 
 python -m pip check || echo "uh oh"
 
-jupyter serverextension enable --sys-prefix --py jupyter_videochat
-jupyter serverextension enable --sys-prefix --py nbgitpuller
-jupyter serverextension enable --sys-prefix --py jupyter_drawio_export
-
 # download chromium (bleah)
 jupyter drawio-export provision
 
