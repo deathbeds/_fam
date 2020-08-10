@@ -7,3 +7,7 @@ jupyterlab-lsp/
 jupyterlab-outsource/
 node_modules/
 wxyz/
+.ipynb_checkpoints/
+__pycache__/
+untitled*
+Untitled*

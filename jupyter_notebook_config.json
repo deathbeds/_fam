@@ -7,23 +7,6 @@
       }
     }
   },
-  "ServerProxy": {
-    "servers": {
-      "drawio-export-demo": {
-        "command": [
-          "python",
-          "scripts/jupyterlab-drawio/scripts/drawio_export_demo.py"
-        ],
-        "environment": {
-          "PORT": "{port}"
-        },
-        "timeout": 40,
-        "launcher_entry": {
-          "title": "Drawio Export Demo"
-        }
-      }
-    }
-  },
   "VideoChat": {
     "room_prefix": "deathbeds-friends-and-family",
     "rooms": [

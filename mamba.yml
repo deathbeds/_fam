@@ -3,9 +3,6 @@ channels:
 - conda-forge
 - nodefaults
 dependencies:
-# this will have already been handled by Project.toml, as the conda-forge version
-# lags fairly significantly
-# - julia
 - altair
 - antlr-python-runtime
 - appdirs
@@ -21,11 +18,12 @@ dependencies:
 - fastapi
 - genson
 - graphviz
+- hdbscan
 - holoviews
 - httpx
-- hdbscan
 - hvplot
 - hypothesis-jsonschema
+- idna
 - importnb
 - ipycanvas
 - ipycytoscape
@@ -39,9 +37,11 @@ dependencies:
 - json-e
 - json5
 - jsonpointer
+- jsonpointer>1.13
 - jupyter_bokeh
 - jupyter-server-proxy
 - jupyterlab ==2.2.2
+- jupyterlab-git
 - lxml
 - matplotlib-base
 - metakernel
@@ -63,13 +63,14 @@ dependencies:
 - pyls-memestra
 - pypdf2
 - pytest
+- python =3.7
 - python-graphviz
 - python-language-server
-- python =3.7
 - raven
 - rdflib-jsonld
 - regex
 - requests_cache
+- rfc3987
 - scikit-image
 - scikit-learn
 - shapely
@@ -77,26 +78,26 @@ dependencies:
 - snorkel
 - spacy
 - spacy-lookups-data
-- stringcase
+- spacy-model-en_core_web_sm
 - sphinx
+- strict-rfc3339
+- stringcase
 - sympy
 - tabulate
 - textacy
 - ujson <=1.35
 - voila
-- xeus-sqlite 
+- webcolors
 - xeus-python >=0.8.3
+- xeus-sqlite
 - xonsh
-- xwidgets
 - pip:
   - git+https://github.com/deathbeds/ktop
   - git+https://github.com/ekaschalk/jedhy.git
   - git+https://github.com/Calysto/calysto_hy.git
   - graphviz2drawio
-  - jsonschema[format_nongpl]
-  - jupyterlab-git
+  - jupyter-drawio-export ==0.8.0a0
   - jupyter-starters ==0.3.0a0
   - jupyter-videochat ==0.1.1
   - pidgy
   - poser
-  

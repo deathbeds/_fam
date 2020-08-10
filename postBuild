@@ -6,12 +6,15 @@ mamba env update --file mamba.yml --prefix ${NB_PYTHON_PREFIX}
 python -m pidgy kernel install
 # TODO: get working
 # python -m calysto_hy install
-python -m spacy download en_core_web_sm
 
 python -m pip check || echo "uh oh"
 
 jupyter serverextension enable --sys-prefix --py jupyter_videochat
 jupyter serverextension enable --sys-prefix --py nbgitpuller
+jupyter serverextension enable --sys-prefix --py jupyter_drawio_export
+
+# download chromium (bleah)
+jupyter drawio-export provision
 
 # tries to install in ~/.jupyter otherwise
 JUPYTER_CONFIG_DIR=${NB_PYTHON_PREFIX}/etc/jupyter \
@@ -30,25 +33,6 @@ pushd webio/packages
   jlpm build
   pushd jupyter-lab-provider
     jupyter labextension install $(npm pack .) --no-build --debug
-  popd
-popd
-
-# this is a fork of https://github.com/QuantStack/jupyterlab-drawio
-git clone https://github.com/bollwyvl/jupyterlab-drawio
-
-pushd jupyterlab-drawio
-  git checkout add-drawio-export
-  git submodule update --init
-  jupyter nbconvert --execute scripts/Drawio_Update.ipynb
-  jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
-  jlpm build
-  npm pack
-  jupyter labextension install \
-      ./jupyterlab-drawio-*.tgz \
-      --no-build \
-      --debug
-  pushd drawio-export
-    jlpm --ignore-optional || jlpm || echo "well, let's try anyway"
   popd
 popd
 
