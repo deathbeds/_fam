@@ -11,11 +11,13 @@ dependencies:
 - black
 - boltons
 - bqplot
+- cython
 - datashader
 - doit =0.31
 - emoji
 - escapism
 - fastapi
+- gast >=0.3.3,<0.4.0
 - genson
 - graphviz
 - hdbscan
