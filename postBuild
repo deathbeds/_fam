@@ -9,6 +9,10 @@ python -m pidgy kernel install
 
 python -m pip check || echo "uh oh"
 
+# oddly-misbehaving
+jupyter serverextension enable --sys-prefix --py jupyterlab_git
+jupyter serverextension list
+
 # download chromium (bleah)
 jupyter drawio-export provision
 
