@@ -1,5 +1,5 @@
 {
-  "LabApp": {
+  "NotebookApp": {
     "tornado_settings": {
       "page_config_data": {
         "buildCheck": false,
