@@ -42,7 +42,6 @@ dependencies:
 - jupyter_bokeh
 - jupyter-server-proxy
 - jupyterlab ==2.2.4
-- jupyterlab-git
 - lxml
 - matplotlib-base
 - metakernel
@@ -101,3 +100,4 @@ dependencies:
   - jupyter-videochat ==0.1.1
   - pidgy
   - poser
+  - jupyterlab-git
