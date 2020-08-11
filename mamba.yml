@@ -39,7 +39,7 @@ dependencies:
 - jsonpointer >1.13
 - jupyter_bokeh
 - jupyter-server-proxy
-- jupyterlab ==2.2.2
+- jupyterlab ==2.2.4
 - jupyterlab-git
 - lxml
 - matplotlib-base
