@@ -98,6 +98,6 @@ dependencies:
   - jupyter-drawio-export ==0.8.0a0
   - jupyter-starters ==0.3.0a0
   - jupyter-videochat ==0.1.1
-  - pidgy
-  - poser
   - jupyterlab-git
+  - git+https://github.com/deathbeds/pidgy.git
+  - git+https://github.com/deathbeds/posert.git
