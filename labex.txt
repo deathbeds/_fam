@@ -1,4 +1,8 @@
 @bokeh/jupyter_bokeh
+@deathbeds/jupyterlab-drawio-notebook@0.8.0-alpha0
+@deathbeds/jupyterlab-drawio-pdf@0.8.0-alpha0
+@deathbeds/jupyterlab-drawio-webpack@13.6.1-alpha0
+@deathbeds/jupyterlab-drawio@0.8.0-alpha0
 @deathbeds/jupyterlab-font-anonymous-pro
 @deathbeds/jupyterlab-font-dejavu-sans-mono
 @deathbeds/jupyterlab-font-fira-code
@@ -6,9 +10,17 @@
 @deathbeds/jupyterlab-starters
 @jupyter-voila/jupyterlab-preview
 @jupyter-widgets/jupyterlab-manager
+@jupyter-widgets/jupyterlab-sidecar
 @jupyterlab/debugger
 @jupyterlab/git
 @pyviz/jupyterlab_pyviz
+ipycanvas
+ipyevents
+ipysheet
+ipytree
 ipyvolume
+jupyter-cytoscape
+jupyter-leaflet
 jupyter-threejs
+jupyterlab-plugin-graph
 nbdime-jupyterlab

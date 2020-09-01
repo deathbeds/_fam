@@ -3,42 +3,55 @@ channels:
 - conda-forge
 - nodefaults
 dependencies:
-# this will have already been handled by Project.toml, as the conda-forge version
-# lags fairly significantly
-# - julia
 - altair
 - antlr-python-runtime
 - appdirs
 - babel
 - beautifulsoup4
 - black
+- boltons
 - bqplot
+- cython
 - datashader
-- doit=0.31
+- doit =0.31
 - emoji
 - escapism
 - fastapi
+- gast >=0.3.3,<0.4.0
+- genson
 - graphviz
+- hdbscan
 - holoviews
 - httpx
 - hvplot
+- hypothesis-jsonschema
+- idna
 - importnb
+- ipycanvas
+- ipycytoscape
+- ipyevents
+- ipyleaflet
+- ipysheet
+- ipytree
 - ipyvolume
 - ipywebrtc
 - isort >=4.2.5,<5
 - json-e
-- jsonpointer
+- json5
+- jsonpointer >1.13
 - jupyter_bokeh
 - jupyter-server-proxy
-- jupyterlab==2.2.0
+- jupyterlab ==2.2.4
 - lxml
 - matplotlib-base
 - metakernel
 - more-itertools
+- mypy
 - nbdime
 - nbgitpuller
 - networkx
-- nodejs >= 12, <13
+- nltk
+- nodejs >=12,<13
 - nteract_on_jupyter
 - pandas
 - pathspec
@@ -47,31 +60,45 @@ dependencies:
 - pygls
 - pygraphviz
 - pyld
+- pyls-memestra
 - pypdf2
 - pytest
+- python =3.7
 - python-graphviz
 - python-language-server
-- python=3.7
 - raven
 - rdflib-jsonld
 - regex
 - requests_cache
+- rfc3987
 - scikit-image
 - scikit-learn
 - shapely
+- sidecar
+- snorkel
+- spacy
+- spacy-lookups-data
+- spacy-model-en_core_web_sm
+- sphinx
+- strict-rfc3339
 - stringcase
 - sympy
 - tabulate
+- textacy
 - ujson <=1.35
 - voila
-- xeus-python
+- webcolors
+- xeus-python >=0.8.3
+- xonsh
 - pip:
   - git+https://github.com/deathbeds/ktop
   - git+https://github.com/ekaschalk/jedhy.git
   - git+https://github.com/Calysto/calysto_hy.git
   - graphviz2drawio
-  - jupyterlab-git
-  - jupyter-starters==0.3.0a0
+  - jupyter-drawio-export ==0.8.0a0
+  - jupyter-starters ==0.3.0a0
   - jupyter-videochat ==0.1.1
-  - pidgy
-  - poser
+  - jupyterlab-git
+  - git+https://github.com/deathbeds/pidgy.git
+  - git+https://github.com/deathbeds/poser.git
+  - ibis-framework[sql] >=1.3
