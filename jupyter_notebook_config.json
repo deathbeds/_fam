@@ -1,27 +1,17 @@
 {
-  "LabApp": {
+  "NotebookApp": {
     "tornado_settings": {
       "page_config_data": {
         "buildCheck": false,
         "buildAvailable": false
       }
-    }
-  },
-  "ServerProxy": {
-    "servers": {
-      "drawio-export-demo": {
-        "command": [
-          "python",
-          "scripts/jupyterlab-drawio/scripts/drawio_export_demo.py"
-        ],
-        "environment": {
-          "PORT": "{port}"
-        },
-        "timeout": 40,
-        "launcher_entry": {
-          "title": "Drawio Export Demo"
-        }
-      }
+    },
+    "nbserver_extensions": {
+      "jupyter_drawio_export": true,
+      "jupyter_lsp": true,
+      "jupyter_videochat": true,
+      "jupyterlab_git": true,
+      "nbgitpuller": true
     }
   },
   "VideoChat": {
