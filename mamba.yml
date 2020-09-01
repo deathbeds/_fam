@@ -101,3 +101,4 @@ dependencies:
   - jupyterlab-git
   - git+https://github.com/deathbeds/pidgy.git
   - git+https://github.com/deathbeds/poser.git
+  - ibis-framework[sql] >=1.3
