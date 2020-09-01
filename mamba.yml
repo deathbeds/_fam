@@ -100,4 +100,4 @@ dependencies:
   - jupyter-videochat ==0.1.1
   - jupyterlab-git
   - git+https://github.com/deathbeds/pidgy.git
-  - git+https://github.com/deathbeds/posert.git
+  - git+https://github.com/deathbeds/poser.git
