@@ -49,6 +49,7 @@ dependencies:
 - mypy
 - nbdime
 - nbgitpuller
+- nbgrader
 - networkx
 - nltk
 - nodejs >=12,<13
